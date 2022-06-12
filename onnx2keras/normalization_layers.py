@@ -1,6 +1,6 @@
 from tensorflow import keras
 import tensorflow as tf
-import tensorflow_addons as tfa
+# import tensorflow_addons as tfa
 import logging
 from .utils import ensure_tf_type, ensure_numpy_type
 
@@ -79,7 +79,7 @@ def convert_instancenorm(node, params, layers, lambda_func, node_name, keras_nam
 
     epsilon = params['epsilon']
 
-    instance_norm = tfa.layers.InstanceNormalization(
+    instance_norm = tf.keras.layers.BatchNormalization(
         axis=1,
         epsilon=epsilon,
         beta_initializer=tf.constant_initializer(beta),
