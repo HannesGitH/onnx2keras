@@ -1,4 +1,5 @@
 tensorflow-macos
 tensorflow-metal
+tensorflow_addons
 numpy 
 onnx
